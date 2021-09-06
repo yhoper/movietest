@@ -1,8 +1,8 @@
-import  {API_HOST, API_KEY } from './key'
+import  {HOST, KEY } from './KEY'
 import axios from 'axios';
 
 export const getMovies = async(page=1) => {
-  const url = `${API_HOST}/movie/popular?api_key=${API_KEY}&page=${page}&language=es-ES`;
+  const url = `${HOST}/movie/popular?api_key=${KEY}&page=${page}&language=es-ES`;
   try {
     const data = await axios.get(url);
     console.log(data)
@@ -13,7 +13,7 @@ export const getMovies = async(page=1) => {
 }
   
 export const getMovieById = async(id) => {
-  const url = `${API_HOST}/movie/${id}?api_key=${API_KEY}&language=es-ES`;
+  const url = `${HOST}/movie/${id}?api_key=${KEY}&language=es-ES`;
   try {
     const data = await axios.get(url);
     return data
@@ -23,7 +23,7 @@ export const getMovieById = async(id) => {
 }
   
 export const getVideoById = async(idmovie) => {
-  const url = `${API_HOST}/movie/${idmovie}/videos?api_key=${API_KEY}`;
+  const url = `${HOST}/movie/${idmovie}/videos?api_key=${KEY}`;
   try {
     const data = await axios.get(url);
     return data
@@ -32,8 +32,8 @@ export const getVideoById = async(idmovie) => {
   }
 }
   
-export const searchMovie = async(search) => {
-  const url = `${API_HOST}/search/movie?api_key=${API_KEY}&query=${search}&language=es-ES`
+export const getSearchMovie = async(search) => {
+  const url = `${HOST}/search/movie?api_key=${KEY}&query=${search}&language=es-ES`
   try {
     const data = await axios.get(url);
     return data
@@ -43,7 +43,7 @@ export const searchMovie = async(search) => {
 }
   
 export const  getSimilarMovies = async(idMovie) => {
-  const url = `${API_HOST}/movie/${idMovie}/similar?api_key=${API_KEY}&language=es-EN`;
+  const url = `${HOST}/movie/${idMovie}/similar?api_key=${KEY}&language=es-EN`;
   try {
     const data = await axios.get(url);
     return data
