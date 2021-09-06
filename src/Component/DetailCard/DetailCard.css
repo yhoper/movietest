@@ -1,0 +1,36 @@
+.column-detail {
+    float: left;
+    padding: 10px;
+  }
+  
+  .left-detail {
+    width: 44%;
+    margin-right: 1%;
+  }
+  
+  .right-detail {
+    width: 55%;
+  }
+  
+  .row-detail:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .release{
+      width: 100%;
+      font-size: .6rem;
+  }
+  
+  .titleMgBotton{
+    margin: 1% 0 1% 0;
+  }
+  .titleBold{
+    font-weight: bolder;
+  }
+  .genero{
+    margin-bottom: 1%;
+  }
+  .generoColor{
+    color:rgb(172, 43, 43);
+  }
